@@ -1,0 +1,28 @@
+.heading {
+  font-size: calc(var(--heading1) * 0.6);
+  font-weight: 700;
+  display: flex;
+}
+
+.flexContainer {
+  composes: sideBySideCenter from "@/utilsCSS/utils.module.css";
+  justify-content: start;
+}
+
+.title {
+  font-size: calc(var(--display) * 0.5);
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.subtitle {
+  font-weight: 500;
+}
+
+.divider {
+  width: 2px;
+  align-self: stretch;
+  background-color: #ccc;
+  margin-right: 30px;
+  margin-left: 30px;
+}

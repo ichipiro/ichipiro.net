@@ -1,0 +1,38 @@
+.flexContainer {
+  composes: sideBySideCenter from "@/utilsCSS/utils.module.css";
+}
+
+.text {
+  padding-top: calc(var(--display) * 0.5);
+  padding-bottom: calc(var(--display) * 0.7);
+}
+
+.title {
+  font-size: var(--display);
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: var(--small-heading2);
+}
+
+/* image */
+.image {
+  width: 100%;
+  padding: 10px;
+}
+
+.image img {
+  border-radius: 50%;
+  background: black;
+}
+
+@media (min-width: 768px) {
+  .image {
+    width: 50%;
+    padding: 40px;
+  }
+  .title {
+    letter-spacing: 0.15em;
+  }
+}

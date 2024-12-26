@@ -1,0 +1,5 @@
+.basic {
+  font-size: var(--heading2);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}

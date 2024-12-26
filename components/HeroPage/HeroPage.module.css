@@ -1,0 +1,24 @@
+.heroText {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.ctaButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: #005bb5;
+}
