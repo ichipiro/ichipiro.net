@@ -1,9 +1,6 @@
 import Image from "next/image";
-import nextConfig from "../../next.config.mjs";
 import ContentHeader from "../ContentHeader/ContentHeader";
 import styles from "./ContentSection.module.css";
-
-const BASE_PATH = nextConfig.basePath || "";
 
 const ContentSection = ({
   number,
@@ -33,14 +30,7 @@ const ContentSection = ({
         </div>
       </div>
       {/* 右側 */}
-      <Image
-        src={`${BASE_PATH}/${imageUrl}`}
-        width={700}
-        height={700}
-        alt=""
-        priority
-      />
-      `
+      <Image src={imageUrl} width={700} height={700} alt="" priority />`
     </div>
   );
 };

@@ -1,9 +1,8 @@
+import ie from "@/public/ichipiroexplorer.png";
 import Image from "next/legacy/image";
 import { useEffect, useState } from "react";
-import nextConfig from "../../next.config.mjs";
 import ThreeScene from "../ThreeScene";
 import styles from "./hero.module.css";
-const BASE_PATH = nextConfig.basePath || "";
 
 const Hero = ({
   title,
@@ -28,7 +27,7 @@ const Hero = ({
       {isMobile ? (
         <figure className={styles.image}>
           <Image
-            src={`${BASE_PATH}/ichipiroexplorer.png`}
+            src={ie}
             alt=""
             layout="responsive"
             sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
