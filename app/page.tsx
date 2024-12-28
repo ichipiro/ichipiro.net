@@ -195,8 +195,8 @@ const HomePage = () => {
           <div className={styles.centerText}>
             <SectionHeader title="CONTACT" subtitle="お問い合わせ" />
 
-            <p>– X(Twitter) : @hcu_tech</p>
-            <p>– メール : contact@ichipiro.net</p>
+            <p>– X(Twitter) : <a href="https://x.com/hcu_tech">@hcu_tech</a></p>
+            <p>– メール : <a href="mailto:contact@ichipiro.net">contact@ichipiro.net</a></p>
           </div>
 
           <div id="faq"

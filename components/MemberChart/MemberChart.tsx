@@ -46,9 +46,9 @@ const MemberChart: React.FC = () => {
     return null;
   }
 
-  const chartWidth = isMobile ? 200 : 800;
-  const chartHeight = isMobile ? 500 : 200;
-  const layout = isMobile ? "horizontal" : "vertical";
+  const chartWidth = isMobile ? 400 : 800;
+  const chartHeight = isMobile ? 150 : 200;
+  const layout = isMobile ? "vertical" : "vertical";
 
   return (
     <div>
@@ -72,13 +72,13 @@ const MemberChart: React.FC = () => {
             <CartesianGrid strokeDasharray="3 3" />
             {isMobile ? (
               <>
-                <XAxis dataKey="name" type="category" />
-                <YAxis
-                  type="number"
-                  domain={[0, 100]}
-                  tickFormatter={(tick) => `${tick.toFixed(2)}%`}
-                />
-              </>
+              <XAxis
+                type="number"
+                domain={[0, 100]}
+                tickFormatter={(tick) => `${tick.toFixed(2)}%`}
+              />
+              <YAxis dataKey="name" type="category" />
+            </>
             ) : (
               <>
                 <XAxis
