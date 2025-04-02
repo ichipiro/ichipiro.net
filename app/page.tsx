@@ -185,7 +185,19 @@ const HomePage = () => {
             <SectionHeader title="ENTER" subtitle="入会方法" />
 
             <p className={styles.msg}>
-              入会方法は準備中です。現状は「お問い合わせ」から入会希望をお願いします。
+              IEの活動内容などをまとめたページを用意しました。<br></br>
+              入会を検討している方は、ぜひご覧ください。<br></br>
+              質問も匿名で受け付けています。
+            </p>
+            <p className={styles.msg}>
+              <a href="https://ichipiro.notion.site/"><u>IE 紹介ページ</u></a>
+            </p>
+
+            <p className={styles.msg}>
+              入会を希望される方は、以下のフォームから入部届を提出してください。
+            </p>
+            <p className={styles.msg}>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScc3UJecZXr4tkqszZKHv7CiFFKQJMXFIy6XlJ8H1qRvLJf2Q/viewform?usp=dialog"><u>IE 入部届</u></a>
             </p>
             
           </div>
