@@ -167,7 +167,7 @@ const HomePage = () => {
         <div id="member" className={styles.box}>
           <div className={styles.centerText}>
             <SectionHeader title="MEMBER" subtitle="構成人数・学科" />
-            <p>いちぴろ・エクスプローラは現在27人で活動しています。</p>
+            <p>いちぴろ・エクスプローラは現在26人で活動しています。</p>
           </div>
           <div
             style={{
