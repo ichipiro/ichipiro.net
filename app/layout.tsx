@@ -2,6 +2,7 @@
 
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
+import Analytics from "@/components/Analytics/Analytics";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Viewport } from "next";
 import { Zen_Kaku_Gothic_New } from "next/font/google";
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <ThemeProvider theme={theme}>
         <body className={ZenKakuGothicNewFont.className}>
+          <Analytics />
           <Header />
           {children}
           <Footer />
