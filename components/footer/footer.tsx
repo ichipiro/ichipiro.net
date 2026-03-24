@@ -11,7 +11,7 @@ const Footer = () => {
           <Logo />
           <Social />
         </div>
-        <div className={styles.centerText}>© 2024 Ichipiro Explorer</div>
+        <div className={styles.centerText}>© 2026 Ichipiro Explorer</div>
       </Container>
     </footer>
   );

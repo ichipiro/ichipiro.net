@@ -197,7 +197,7 @@ const HomePage = () => {
               入会を希望される方は、以下のフォームから入部届を提出してください。
             </p>
             <p className={styles.msg}>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScc3UJecZXr4tkqszZKHv7CiFFKQJMXFIy6XlJ8H1qRvLJf2Q/viewform?usp=dialog"><u>IE 入部届</u></a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSed5cRZVESg49_l24tF3vLE0_Z1duR1OfSgrRPAzETkQVTfWw/viewform?usp=dialog"><u>IE 入部届</u></a>
             </p>
             
           </div>
