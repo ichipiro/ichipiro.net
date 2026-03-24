@@ -6,7 +6,7 @@ import Analytics from "@/components/Analytics/Analytics";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Viewport } from "next";
 import { Zen_Kaku_Gothic_New } from "next/font/google";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import "./globals.css";
 
 const ZenKakuGothicNewFont = Zen_Kaku_Gothic_New({
@@ -38,7 +38,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <ThemeProvider theme={theme}>
         <body className={ZenKakuGothicNewFont.className}>
-          <Analytics />
+          <Suspense fallback={null}>
+            <Analytics />
+          </Suspense>
           <Header />
           {children}
           <Footer />
