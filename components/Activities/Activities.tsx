@@ -1,5 +1,6 @@
 "use client"
 
+import { clsx } from "clsx";
 import styles from "./activities.module.css";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import ContentSection from "@/components/ContentSection/ContentSection";
@@ -10,29 +11,9 @@ import "slick-carousel/slick/slick.css";
 
 const NextArrow = (props: CustomArrowProps) => {
   const { className, style, onClick } = props;
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  if (!isVisible) return null;
   return (
     <div
-      className={className}
+      className={clsx(styles.arrowBtn, className)}
       style={{
         ...style,
         background: "black",
@@ -46,28 +27,9 @@ const NextArrow = (props: CustomArrowProps) => {
 const PrevArrow = (props: CustomArrowProps) => {
   const { className, style, onClick } = props;
   const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  if (!isVisible) return null;
   return (
     <div
-      className={className}
+      className={clsx(styles.arrowBtn, className)}
       style={{
         ...style,
         background: "black",

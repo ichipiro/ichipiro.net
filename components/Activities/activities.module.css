@@ -6,3 +6,9 @@
 .box {
   margin-bottom: var(--space-lg);
 }
+
+@media screen and (max-width: 768px) {
+  .arrowBtn {
+    display: none!important;
+  }
+}

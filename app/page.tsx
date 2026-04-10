@@ -37,7 +37,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <Activities></Activities>
+        <Activities />
 
         <div id="member" className={styles.box}>
           <div className={styles.centerText}>
