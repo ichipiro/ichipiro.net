@@ -1,10 +1,11 @@
+"use client"
 import { Avatar, Box, Typography } from "@mui/material";
 import { blue } from "@mui/material/colors";
 
 const FAQ = ({ question, answer }: any) => {
   return (
-    <Box mb={4} p={2}>
-      <Box display="flex" alignItems="center" mb={1}>
+    <Box sx={{ mb: 4, p: 2 }}>
+      <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
         <Avatar sx={{ bgcolor: blue[500], mr: 2, width: 32, height: 32 }}>
           Q
         </Avatar>
@@ -16,7 +17,7 @@ const FAQ = ({ question, answer }: any) => {
           {question}
         </Typography>
       </Box>
-      <Box display="flex" alignItems="center">
+      <Box sx={{ display: "flex", alignItems: "center" }}>
         <Avatar sx={{ bgcolor: "black", mr: 2, width: 32, height: 32 }}>
           A
         </Avatar>
