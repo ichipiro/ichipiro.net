@@ -1,0 +1,8 @@
+.centerText {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.box {
+  margin-bottom: var(--space-lg);
+}
