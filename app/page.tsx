@@ -2,10 +2,10 @@ import Container from "@/components/container/container";
 import DiscordWidget from "@/components/DiscordWidget/DiscordWidget";
 import FAQ from "@/components/FAQ/FAQ";
 import Hero from "@/components/hero/hero";
-import MemberChart from "@/components/MemberChart/MemberChart";
+// import MemberChart from "@/components/MemberChart/MemberChart";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import styles from "./page.module.css";
-import Activities from "@/components/Activities/Activities"
+// import Activities from "@/components/Activities/Activities"
 
 const HomePage = () => {
   return (
@@ -37,7 +37,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <Activities />
+        {/*<Activities />*/}
 
         <div id="member" className={styles.box}>
           <div className={styles.centerText}>
@@ -51,7 +51,7 @@ const HomePage = () => {
               justifyContent: "center",
             }}
           >
-            <MemberChart />
+          {/*<MemberChart />*/}
           </div>
         </div>
 
