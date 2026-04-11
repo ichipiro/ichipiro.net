@@ -6,12 +6,14 @@ import {
   BarChart,
   CartesianGrid,
   Legend,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
 import CustomTooltip from "./CustomTooltip";
 import { data } from "./data";
+import styles from "./MemberChart.module.css";
 
 const colors = [
   "#AEC6CF", // パステルブルー
@@ -51,70 +53,72 @@ const MemberChart: React.FC = () => {
   const layout = isMobile ? "vertical" : "vertical";
 
   return (
-    <div>
+    <div className={styles.chartContainer}>
       {data.map((item, index) => (
         <div key={item.name}>
           <h3>
             {item.name} - 全体の人数: {item.total}
           </h3>
-          <BarChart
-            width={chartWidth}
-            height={chartHeight}
-            data={[item]}
-            layout={layout}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            {isMobile ? (
-              <>
-              <XAxis
-                type="number"
-                domain={[0, 100]}
-                tickFormatter={(tick) => `${tick.toFixed(2)}%`}
-              />
-              <YAxis dataKey="name" type="category" />
-            </>
-            ) : (
-              <>
-                <XAxis
-                  type="number"
-                  domain={[0, 100]}
-                  tickFormatter={(tick) => `${tick.toFixed(2)}%`}
-                />
-                <YAxis dataKey="name" type="category" />
-              </>
-            )}
-            <Tooltip
-              content={
-                <CustomTooltip
-                  active={undefined}
-                  payload={undefined}
-                  label={undefined}
-                />
-              }
-            />
-            <Legend />
-            {Object.keys(item).map((key, i) => {
-              if (key.includes("_percentage")) {
-                const originalKey = key.replace("_percentage", "");
-                return (
-                  <Bar
-                    key={key}
-                    dataKey={key}
-                    name={originalKey}
-                    stackId="a"
-                    fill={colors[i % colors.length]}
+          <ResponsiveContainer minHeight={150} width="100%">
+            <BarChart
+              width={chartWidth}
+              height={chartHeight}
+              data={[item]}
+              layout={layout}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              {isMobile ? (
+                <>
+                  <XAxis
+                    type="number"
+                    domain={[0, 100]}
+                    tickFormatter={(tick) => `${tick.toFixed(2)}%`}
                   />
-                );
-              }
-              return null;
-            })}
-          </BarChart>
+                  <YAxis dataKey="name" type="category" />
+                </>
+              ) : (
+                <>
+                  <XAxis
+                    type="number"
+                    domain={[0, 100]}
+                    tickFormatter={(tick) => `${tick.toFixed(2)}%`}
+                  />
+                  <YAxis dataKey="name" type="category" />
+                </>
+              )}
+              <Legend />
+              {Object.keys(item).map((key, i) => {
+                if (key.includes("_percentage")) {
+                  const originalKey = key.replace("_percentage", "");
+                  return (
+                    <Bar
+                      key={key}
+                      dataKey={key}
+                      name={originalKey}
+                      stackId="a"
+                      fill={colors[i % colors.length]}
+                    />
+                  );
+                }
+                return null;
+              })}
+              <Tooltip
+                content={
+                  <CustomTooltip
+                    active={undefined}
+                    payload={undefined}
+                    label={undefined}
+                  />
+                }
+              />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       ))}
     </div>
