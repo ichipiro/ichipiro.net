@@ -1,67 +1,46 @@
-"use client"
+"use client";
 
 import { clsx } from "clsx";
 import styles from "./activities.module.css";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import ContentSection from "@/components/ContentSection/ContentSection";
 import { useEffect, useState } from "react";
-import Slider, { CustomArrowProps } from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
-const NextArrow = (props: CustomArrowProps) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={clsx(styles.arrowBtn, className)}
-      style={{
-        ...style,
-        background: "black",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-};
-
-const PrevArrow = (props: CustomArrowProps) => {
-  const { className, style, onClick } = props;
-  const [isVisible, setIsVisible] = useState(true);
-  return (
-    <div
-      className={clsx(styles.arrowBtn, className)}
-      style={{
-        ...style,
-        background: "black",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-};
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-  autoplay: true,
-  autoplaySpeed: 10000, //10s
-};
-
+// const settings = {
+//   dots: true,
+//   speed: 500,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 10000, //10s
+// };
+//
 const Activities = () => {
-  return (
-        <div id="activity" className={styles.box}>
-          <div className={styles.centerText}>
-            <SectionHeader title="ACTIVITY" subtitle="活動紹介" />
-          </div>
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true}, [Autoplay()] );
+  console.log(emblaApi);
+  const goToPrev = () => emblaApi?.scrollPrev();
+  const goToNext = () => emblaApi?.scrollNext();
 
-          <Slider {...settings}>
-            <div>
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.plugins().autoplay?.play();
+  }, [emblaApi]);
+
+  return (
+    <div id="activity" className={styles.box}>
+      <div className={styles.centerText}>
+        <SectionHeader title="ACTIVITY" subtitle="活動紹介" />
+      </div>
+
+      <div className={styles.embla}>
+        <button className="embla__prev" onClick={goToPrev}>
+          &lt;
+        </button>
+        <div className={styles.embla__viewport} ref={emblaRef}>
+          <div className={styles.embla__container}>
+            <div className={styles.embla__slide}>
               <ContentSection
                 number="01"
                 title="定例会"
@@ -71,7 +50,7 @@ const Activities = () => {
                 imageUrl="/teirei.jpg"
               />
             </div>
-            <div>
+            <div className={styles.embla__slide}>
               <ContentSection
                 number="02"
                 title="勉強会"
@@ -80,7 +59,7 @@ const Activities = () => {
                 imageUrl="/gitstudy.jpg"
               />
             </div>
-            <div>
+            <div className={styles.embla__slide}>
               <ContentSection
                 number="03"
                 title="イベント参加"
@@ -89,9 +68,14 @@ const Activities = () => {
                 imageUrl="/hack.png"
               />
             </div>
-          </Slider>
+          </div>
         </div>
-  )
-}
+        <button className="embla__next" onClick={goToNext}>
+          &gt;
+        </button>
+      </div>
+    </div>
+  );
+};
 
-export default Activities
+export default Activities;

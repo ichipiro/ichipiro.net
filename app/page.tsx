@@ -5,7 +5,7 @@ import Hero from "@/components/hero/hero";
 // import MemberChart from "@/components/MemberChart/MemberChart";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import styles from "./page.module.css";
-// import Activities from "@/components/Activities/Activities"
+import Activities from "@/components/Activities/Activities"
 
 const HomePage = () => {
   return (
@@ -37,7 +37,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        {/*<Activities />*/}
+        <Activities />
 
         <div id="member" className={styles.box}>
           <div className={styles.centerText}>
