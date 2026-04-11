@@ -1,8 +1,8 @@
 import Container from "@/components/container/container";
-import DiscordWidget from "@/components/DiscordWidget/DiscordWidget";
+// import DiscordWidget from "@/components/DiscordWidget/DiscordWidget";
 import FAQ from "@/components/FAQ/FAQ";
 import Hero from "@/components/hero/hero";
-// import MemberChart from "@/components/MemberChart/MemberChart";
+import MemberChart from "@/components/MemberChart/MemberChart";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import styles from "./page.module.css";
 import Activities from "@/components/Activities/Activities"
@@ -51,7 +51,7 @@ const HomePage = () => {
               justifyContent: "center",
             }}
           >
-          {/*<MemberChart />*/}
+          <MemberChart />
           </div>
         </div>
 
