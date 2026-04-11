@@ -14,26 +14,28 @@ import CustomTooltip from "./CustomTooltip";
 import { data } from "./data";
 import styles from "./MemberChart.module.css";
 
-const colors = [
-  "#c3e9f7", // パステルブルー
-  "#779ECB", // パステルパープル
-  "#77DD77", // パステルグリーン
-  "#FFB6C1", // パステルピンク
-  "#FFB347", // パステルオレンジ
-  "#FF6961", // パステルレッド
-  "#FDFD96", // パステルイエロー
-  "#CFCFC4", // パステルグレー
-];
-const grade_colors = [[
-  "#c0e5ff", // 1. かなり薄い水色
-  "#AED6F1", // 2. 少し明るい水色
-  "#5DADE2", // 3. 鮮やかな水色
-  "#2E86C1", // 4. スタンダードな青
-  "#21618C", // 5. 濃い青
-  "#154360", // 6. かなり濃いネイビー
-],
-[ 
-  /*
+// const colors = [
+//   "#c3e9f7", // パステルブルー
+//   "#779ECB", // パステルパープル
+//   "#77DD77", // パステルグリーン
+//   "#FFB6C1", // パステルピンク
+//   "#FFB347", // パステルオレンジ
+//   "#FF6961", // パステルレッド
+//   "#FDFD96", // パステルイエロー
+//   "#CFCFC4", // パステルグレー
+// ];
+
+const grade_colors = [
+  [
+    "#c0e5ff", // 1. かなり薄い水色
+    "#AED6F1", // 2. 少し明るい水色
+    "#5DADE2", // 3. 鮮やかな水色
+    "#2E86C1", // 4. スタンダードな青
+    "#21618C", // 5. 濃い青
+    "#154360", // 6. かなり濃いネイビー
+  ],
+  [
+    /*
   "#85C1E9", // 2. 明るい青
   
   "#3498DB", // 3. 鮮やかな青
@@ -46,22 +48,19 @@ const grade_colors = [[
   "#D6EAF8", // 1. 薄い水色
  
   */
- "#CFCFC4", // パステルグレー
- "#a7f0c7", // 1. 薄いパステルグリーン
-  "#58D68D", // 2. 明るく鮮やかな緑
-  "#229954", // 3. スタンダードで落ち着いた緑
-  "#145A32", // 4. かなり濃いダークグリーン
-  //"#F39C12", // 5. 鮮やかなゴールドオレンジ
-  "#FADBD8", // 6. 薄い赤（ピンク系）
-  "#E74C3C", // 7. 鮮やかな赤
-  //"#943126", // 8. 濃い赤（えんじ色）
-  
-]];
-  
-
+    "#CFCFC4", // パステルグレー
+    "#a7f0c7", // 1. 薄いパステルグリーン
+    "#58D68D", // 2. 明るく鮮やかな緑
+    "#229954", // 3. スタンダードで落ち着いた緑
+    "#145A32", // 4. かなり濃いダークグリーン
+    //"#F39C12", // 5. 鮮やかなゴールドオレンジ
+    "#FADBD8", // 6. 薄い赤（ピンク系）
+    "#E74C3C", // 7. 鮮やかな赤
+    //"#943126", // 8. 濃い赤（えんじ色）
+  ],
+];
 
 const MemberChart: React.FC = () => {
-
   return (
     <div className={styles.chartContainer}>
       {data.map((item, index) => (
@@ -81,14 +80,13 @@ const MemberChart: React.FC = () => {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <>
-                <XAxis
-                  type="number"
-                  domain={[0, 100]}
-                  tickFormatter={(tick) => `${tick.toFixed(2)}%`}
-                />
-                <YAxis dataKey="name" type="category" />
-              </>
+              {/*横軸をパーセンテージ表示にする*/}
+              <XAxis
+                type="number"
+                domain={[0, 100]}
+                tickFormatter={(tick) => `${tick.toFixed(2)}%`}
+              />
+              <YAxis dataKey="name" type="category" />
               <Legend />
               {Object.keys(item).map((key, i) => {
                 if (key.includes("_percentage")) {
@@ -99,7 +97,11 @@ const MemberChart: React.FC = () => {
                       dataKey={key}
                       name={originalKey}
                       stackId="a"
-                      fill={colors[i % colors.length]}
+                      fill={
+                        grade_colors[index][
+                        (i - 2) % grade_colors[index].length
+                        ]
+                      }
                     />
                   );
                 }
