@@ -5,6 +5,7 @@
 }
 
 .large {
-  composes: default;
+  width: 92%;
+  margin: 0 auto;
   max-width: 1280px;
 }
