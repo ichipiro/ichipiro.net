@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -27,30 +26,6 @@ const colors = [
 ];
 
 const MemberChart: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null;
-  }
-
-  const chartWidth = isMobile ? 400 : 800;
-  const chartHeight = isMobile ? 150 : 200;
-  const layout = isMobile ? "vertical" : "vertical";
 
   return (
     <div className={styles.chartContainer}>
@@ -61,10 +36,8 @@ const MemberChart: React.FC = () => {
           </h3>
           <ResponsiveContainer minHeight={150} width="100%">
             <BarChart
-              width={chartWidth}
-              height={chartHeight}
               data={[item]}
-              layout={layout}
+              layout="vertical"
               margin={{
                 top: 20,
                 right: 30,
@@ -73,25 +46,14 @@ const MemberChart: React.FC = () => {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              {isMobile ? (
-                <>
-                  <XAxis
-                    type="number"
-                    domain={[0, 100]}
-                    tickFormatter={(tick) => `${tick.toFixed(2)}%`}
-                  />
-                  <YAxis dataKey="name" type="category" />
-                </>
-              ) : (
-                <>
-                  <XAxis
-                    type="number"
-                    domain={[0, 100]}
-                    tickFormatter={(tick) => `${tick.toFixed(2)}%`}
-                  />
-                  <YAxis dataKey="name" type="category" />
-                </>
-              )}
+              <>
+                <XAxis
+                  type="number"
+                  domain={[0, 100]}
+                  tickFormatter={(tick) => `${tick.toFixed(2)}%`}
+                />
+                <YAxis dataKey="name" type="category" />
+              </>
               <Legend />
               {Object.keys(item).map((key, i) => {
                 if (key.includes("_percentage")) {
