@@ -1,25 +1,19 @@
 "use client";
 
-import { clsx } from "clsx";
 import styles from "./activities.module.css";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import ContentSection from "@/components/ContentSection/ContentSection";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { TbChevronLeft, TbChevronRight } from "react-icons/tb";
 
-// const settings = {
-//   dots: true,
-//   speed: 500,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 10000, //10s
-// };
-//
 const Activities = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true}, [Autoplay()] );
-  console.log(emblaApi);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({
+      delay: 10000,
+    }),
+  ]);
   const goToPrev = () => emblaApi?.scrollPrev();
   const goToNext = () => emblaApi?.scrollNext();
 
@@ -35,8 +29,8 @@ const Activities = () => {
       </div>
 
       <div className={styles.embla}>
-        <button className="embla__prev" onClick={goToPrev}>
-          &lt;
+        <button className={styles.embla__prev} onClick={goToPrev}>
+          <TbChevronLeft />
         </button>
         <div className={styles.embla__viewport} ref={emblaRef}>
           <div className={styles.embla__container}>
@@ -70,8 +64,8 @@ const Activities = () => {
             </div>
           </div>
         </div>
-        <button className="embla__next" onClick={goToNext}>
-          &gt;
+        <button className={styles.embla__next} onClick={goToNext}>
+          <TbChevronRight />
         </button>
       </div>
     </div>

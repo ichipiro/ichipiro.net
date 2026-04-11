@@ -16,6 +16,7 @@
 .embla {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .embla__viewport {
   overflow: hidden;
@@ -29,4 +30,11 @@
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+.embla__prev, .embla__next {
+  background: #00000040;
+  border-radius: 50%;
+  border: solid 2px black;
+  color: black;
 }
