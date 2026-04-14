@@ -1,0 +1,40 @@
+.centerText {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.box {
+  margin-bottom: var(--space-lg);
+}
+
+.embla {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.embla__prev, .embla__next {
+  background: #00000040;
+  border-radius: 50%;
+  border: solid 2px black;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .embla__prev, .embla__next {
+    display: none;
+  }
+}

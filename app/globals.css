@@ -1,7 +1,5 @@
 /* app/styles/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --white: #ffffff;
