@@ -1,0 +1,14 @@
+.centerText {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.box {
+  margin-bottom: var(--space-lg);
+}
+
+@media screen and (max-width: 768px) {
+  .arrowBtn {
+    display: none!important;
+  }
+}
