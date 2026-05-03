@@ -27,6 +27,19 @@
   background: black;
 }
 
+.threePlaceholder {
+  width: 668px;
+  height: 432px;
+}
+
+.mobileOnly {
+  display: block;
+}
+
+.desktopOnly {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .image {
     width: 50%;
@@ -34,5 +47,11 @@
   }
   .title {
     letter-spacing: 0.15em;
+  }
+  .mobileOnly {
+    display: none;
+  }
+  .desktopOnly {
+    display: block;
   }
 }

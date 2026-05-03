@@ -1,3 +1,5 @@
+"use client";
+
 import HeroPage from "@/components/HeroPage/HeroPage";
 import {
   ContactShadows,

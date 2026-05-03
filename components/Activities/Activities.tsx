@@ -4,7 +4,6 @@ import { clsx } from "clsx";
 import styles from "./activities.module.css";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import ContentSection from "@/components/ContentSection/ContentSection";
-import { useEffect, useState } from "react";
 import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -26,7 +25,6 @@ const NextArrow = (props: CustomArrowProps) => {
 
 const PrevArrow = (props: CustomArrowProps) => {
   const { className, style, onClick } = props;
-  const [isVisible, setIsVisible] = useState(true);
   return (
     <div
       className={clsx(styles.arrowBtn, className)}
