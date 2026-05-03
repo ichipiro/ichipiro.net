@@ -3,7 +3,10 @@ import Image from "next/legacy/image";
 import dynamic from "next/dynamic";
 import styles from "./hero.module.css";
 
-const ThreeScene = dynamic(() => import("../ThreeScene"), { ssr: false });
+const ThreeScene = dynamic(() => import("../ThreeScene"), {
+  ssr: false,
+  loading: () => <div className={styles.threePlaceholder} />,
+});
 
 const Hero = ({
   title,
