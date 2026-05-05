@@ -108,6 +108,7 @@ const MemberChart: React.FC = () => {
                 return null;
               })}
               <Tooltip
+                wrapperStyle={{ zIndex: 1 }}
                 content={
                   <CustomTooltip
                     active={undefined}
