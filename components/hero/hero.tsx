@@ -1,7 +1,7 @@
 "use client"
 
 import ie from "@/public/ichipiroexplorer.png";
-import Image from "next/legacy/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useState } from "react";
 import ThreeScene from "../ThreeScene";
 import styles from "./hero.module.css";
@@ -28,12 +28,11 @@ const Hero = ({
       </div>
       {isMobile ? (
         <figure className={styles.image}>
-          <Image
+          <ExportedImage
             src={ie}
             alt=""
-            layout="responsive"
             sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
-            priority
+            preload
           />
         </figure>
       ) : (

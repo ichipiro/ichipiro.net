@@ -7,6 +7,9 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { TbChevronLeft, TbChevronRight } from "react-icons/tb";
+import TeireiImg from "@/public/teirei.jpg";
+import GitstudyImg from "@/public/gitstudy.jpg";
+import HackImg from "@/public/hack.png";
 
 const Activities = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -41,7 +44,7 @@ const Activities = () => {
                 description="メンバーが学んだ内容や挑戦したことをアウトプットし、意見交換を行います"
                 pointDescription="月３回の定例会で定期的にアウトプットができる点
 毎月10,20,30日の夜にオンラインで開催しており、他の部活やアルバイトで忙しい学生でも参加しやすい"
-                imageUrl="/teirei.jpg"
+                imageUrl={TeireiImg}
               />
             </div>
             <div className={styles.embla__slide}>
@@ -50,7 +53,7 @@ const Activities = () => {
                 title="勉強会"
                 description="GitやJavaScriptなどの技術に関する勉強会を開催します"
                 pointDescription="様々なバックグラウンドの学生が所属しており、プログラミングやネットワーク、サーバ、セキュリティなど幅広い知識を身につけられます"
-                imageUrl="/gitstudy.jpg"
+                imageUrl={GitstudyImg}
               />
             </div>
             <div className={styles.embla__slide}>
@@ -59,7 +62,7 @@ const Activities = () => {
                 title="イベント参加"
                 description="チームでCTF（Capture The Flag）やハッカソンなどのイベントに参加し、実践的なスキルを磨きます"
                 pointDescription="意欲的な学生が多く、チームも作りやすい環境です。気軽に参加を呼びかけられます"
-                imageUrl="/hack.png"
+                imageUrl={HackImg}
               />
             </div>
           </div>

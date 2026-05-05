@@ -12,6 +12,8 @@
 # next.js
 /.next/
 /out/
+/public/nextImageExportOptimizer
+/public/next-image-export-optimizer-hashes.json
 
 # production
 /build
