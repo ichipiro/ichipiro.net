@@ -1,6 +1,6 @@
 "use client"
 
-import ie from "@/public/ichipiroexplorer.png";
+import ie from "@/public/IE_logo_traced.svg";
 import ExportedImage from "next-image-export-optimizer";
 import { ReactNode, useEffect, useState } from "react";
 import ThreeScene from "../ThreeScene";

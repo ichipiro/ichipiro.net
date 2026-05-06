@@ -1,4 +1,21 @@
 .title {
-  font-size: calc(var(--display) * 0.4);
+  font-size: 5rem;
   font-weight: 900;
+  margin-bottom: 30px;
+  line-height: 5rem;
+}
+.desc::after, .desc::before {
+  content: '/';
+  font-weight: 100;
+}
+.desc {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media screen and (max-width: 420px){
+  .title {
+    font-size: 4rem;
+  }
 }

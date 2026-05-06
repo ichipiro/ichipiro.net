@@ -1,0 +1,32 @@
+.iconized {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.faqQuestionContainer .iconized {
+    color: #56b2e7;
+}
+
+.faqAnswerContainer .iconized {
+    color: #e75671;
+}
+
+.faqQuestionContainer {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    color: #56b2e7;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.faqContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 870px){
+    .faqQuestionContainer {
+        flex-direction: column;
+    }
+}

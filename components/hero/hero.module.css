@@ -12,6 +12,7 @@
 .title {
   font-size: 7rem;
   font-weight: 900;
+  line-height: 7.8rem;
 }
 
 .subtitle {
@@ -21,20 +22,24 @@
 /* image */
 .image {
   width: 100%;
-  padding: 10px;
+  padding: 50px;
 }
 
-.image img {
-  border-radius: 50%;
-  background: black;
-}
 
 @media (min-width: 768px) {
   .image {
     width: 50%;
     padding: 40px;
   }
+}
+
+@media screen and (max-width: 768px){
   .title {
-    line-height: 7.8rem;
+    font-size: 5rem;
+    line-height: 5.8rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 }
