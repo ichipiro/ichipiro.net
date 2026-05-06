@@ -17,7 +17,7 @@ const HomePage = () => {
           title={<>Ichipiro<br />Explorer</>}
           subtitle={<>いちぴろ・エクスプローラ<br />広島市立大学ITサークル</>}
         />
-        <div id="topmessage" className={styles.box}>
+        <div id="topmessage" className={`${styles.box} ${styles.topMsg}`}>
           <div>
             <SectionHeader title="TOP MESSAGE" subtitle="私たちについて" />
             <div>
