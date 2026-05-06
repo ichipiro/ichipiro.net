@@ -9,11 +9,11 @@ import Activities from "@/components/Activities/Activities"
 
 const HomePage = () => {
   return (
-    <main>
+    <main className={styles.main}>
       <Container large>
         <Hero
-          title="Ichipiro Explorer"
-          subtitle="いちぴろ・エクスプローラ 広島市立大学ITサークル"
+          title={<>Ichipiro<br />Explorer</>}
+          subtitle={<>いちぴろ・エクスプローラ<br />広島市立大学ITサークル</>}
         />
         <div id="topmessage" className={styles.box}>
           <div className={styles.centerText}>

@@ -1,14 +1,16 @@
 .flexContainer {
   composes: sideBySideCenter from "@/utilsCSS/utils.module.css";
+  padding: 120px 0;
 }
 
 .text {
-  padding-top: calc(var(--display) * 0.5);
-  padding-bottom: calc(var(--display) * 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .title {
-  font-size: var(--display);
+  font-size: 7rem;
   font-weight: 900;
 }
 
@@ -33,6 +35,6 @@
     padding: 40px;
   }
   .title {
-    letter-spacing: 0.15em;
+    line-height: 7.8rem;
   }
 }
