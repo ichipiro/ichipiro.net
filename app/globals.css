@@ -2,6 +2,8 @@
 @import "tailwindcss";
 
 :root {
+  scroll-behavior: smooth;
+
   --white: #ffffff;
   --gray-10: #eeeeee;
   --gray-25: #aaaaaa;
