@@ -1,11 +1,16 @@
 .flexContainer {
   composes: spaceBetween from "@/utilsCSS/utils.module.css";
-  padding: 10px 40px;
-  background: #FFFFFFDD;
-  backdrop-filter: blur(4px) saturate(120%);
+  padding: 40px 40px;
+  background: linear-gradient(#88BBD8, #FFFFFF00);
 }
 .header {
   position: fixed;
   width: 100%;
   z-index: 15;
+}
+
+@media screen and (max-width: 768px){
+  .flexContainer {
+    padding: 20px 40px;
+  }
 }
