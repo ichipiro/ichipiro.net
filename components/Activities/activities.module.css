@@ -47,7 +47,7 @@
     transition: 0s;
   }
   &:active {
-    background: #007bff;
+    background: #699bb9;
     color: white;
   }
 }
