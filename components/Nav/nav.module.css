@@ -11,7 +11,7 @@
 }
 
 /* モバイル */
-@media (max-width: 767px) {
+@media (max-width: 865px) {
   /* ボタン */
   .btn {
     all: unset;
@@ -69,6 +69,7 @@
 
   /* メニュー（オーバーレイ） */
   .list {
+    height: 100dvh;
     position: fixed;
     inset: 0 -100% 0 100%;
     z-index: 100;
