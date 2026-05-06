@@ -18,6 +18,8 @@
 
 .subtitle {
   font-size: var(--small-heading2);
+  font-weight: 600;
+  color: #646464;
 }
 
 /* image */

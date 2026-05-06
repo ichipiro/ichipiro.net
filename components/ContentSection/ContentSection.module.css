@@ -1,11 +1,12 @@
 .highlightBox {
-  background-color: #007bff20;
+  background-color: #c4ddec;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
 }
 .highlightBox .point {
-  background-color: #007bff;
+  background-color: #699bb9;
+  font-weight: 600;
   color: #fff;
   display: inline-block;
   padding: 5px 10px;
