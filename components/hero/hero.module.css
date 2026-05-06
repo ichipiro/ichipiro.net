@@ -10,8 +10,9 @@
 }
 
 .title {
+  font-family: var(--font-Figtree);
   font-size: 7rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 7.8rem;
 }
 

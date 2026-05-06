@@ -1,6 +1,7 @@
 .iconized {
     font-size: 4rem;
     font-weight: 900;
+    font-family: var(--font-Figtree);
 }
 
 .faqQuestionContainer .iconized {

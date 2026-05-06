@@ -1,6 +1,7 @@
 .title {
+  font-family: var(--font-Figtree);
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 500;
   margin-bottom: 30px;
   line-height: 5rem;
 }

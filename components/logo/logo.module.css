@@ -1,4 +1,5 @@
 .basic {
+  font-family: var(--font-Figtree);
   font-size: var(--heading2);
   font-weight: 700;
   display: flex;
