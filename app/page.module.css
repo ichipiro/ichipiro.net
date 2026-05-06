@@ -95,6 +95,30 @@
   padding: 10px 20px;
   background: #000000BB;
   border-radius: 6px;
+  &:hover {
+    animation: 2s gradient cubic-bezier(0.19, 1, 0.22, 1);
+    background: linear-gradient(
+      45deg,
+      hsl(202deg 51% 54%) 0%,
+      hsl(194deg 72% 46%) 8%,
+      hsl(189deg 100% 39%) 17%,
+      hsl(185deg 100% 38%) 25%,
+      hsl(179deg 100% 36%) 33%,
+      hsl(172deg 100% 37%) 42%,
+      hsl(164deg 100% 38%) 50%,
+      hsl(143deg 53% 52%) 58%,
+      hsl(111deg 49% 57%) 67%,
+      hsl(84deg 54% 52%) 75%,
+      hsl(66deg 67% 46%) 83%,
+      hsl(53deg 92% 44%) 92%,
+      hsl(43deg 98% 50%) 100%
+    ) 0 / 200% 100%;
+    background-position: 100% 0;
+    color: white;
+  }
+  &:active {
+    filter: brightness(80%);
+  }
 }
 
 .faqContainer {
@@ -115,6 +139,80 @@
   max-width: 500px;
   border-radius: 12px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .arrowRight {
+    display: none;
+  }
+  &:hover {
+    & span {
+      color: white;
+    }
+    & .arrowRight {
+      display: block;
+      font-size: 2rem;
+      animation: .3s showArrow cubic-bezier(0, 0.79, 0, 0.98);
+    }
+    border: solid 1px transparent;
+    animation: 2s gradient cubic-bezier(0.19, 1, 0.22, 1);
+    background: linear-gradient(
+      45deg,
+      hsl(202deg 51% 54%) 0%,
+      hsl(194deg 72% 46%) 8%,
+      hsl(189deg 100% 39%) 17%,
+      hsl(185deg 100% 38%) 25%,
+      hsl(179deg 100% 36%) 33%,
+      hsl(172deg 100% 37%) 42%,
+      hsl(164deg 100% 38%) 50%,
+      hsl(143deg 53% 52%) 58%,
+      hsl(111deg 49% 57%) 67%,
+      hsl(84deg 54% 52%) 75%,
+      hsl(66deg 67% 46%) 83%,
+      hsl(53deg 92% 44%) 92%,
+      hsl(43deg 98% 50%) 100%
+    ) 0 / 200% 100%;
+    background-position: 100% 0;
+    color: white;
+  }
+  &:active {
+    filter: brightness(80%);
+  }
+}
+@media screen and (max-width: 390) {
+  .contacts a {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .4rem;
+    & .arrowRight {
+      display: block;
+      font-size: 2rem;
+    }
+    &:hover {
+      & .arrowRight {
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes showArrow {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .contacts span {

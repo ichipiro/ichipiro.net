@@ -7,7 +7,7 @@ import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import styles from "./page.module.css";
 import Activities from "@/components/Activities/Activities"
 import { SiX } from "react-icons/si";
-import { TbMail } from "react-icons/tb";
+import { TbArrowRight, TbMail } from "react-icons/tb";
 
 const HomePage = () => {
   return (
@@ -78,21 +78,27 @@ const HomePage = () => {
 
           <div className={styles.contacts}>
             <a href="https://x.com/hcu_tech">
-              <div className={styles.method}>
-                <SiX />
-                X(Twitter)アカウント
+              <div>
+                <div className={styles.method}>
+                  <SiX />
+                  X(Twitter)アカウント
+                </div>
+                <span>@hcu_tech</span>
               </div>
-              <span>@hcu_tech</span>
+              <TbArrowRight className={styles.arrowRight} />
             </a>
 
             <a href="mailto:contact@ichipiro.net">
-              <div className={styles.method}>
-                <div>
-                  <TbMail />
+              <div>
+                <div className={styles.method}>
+                  <div>
+                    <TbMail />
+                  </div>
+                  メール
                 </div>
-                メール
+                <span>contact@ichipiro.net</span>
               </div>
-              <span>contact@ichipiro.net</span>
+              <TbArrowRight className={styles.arrowRight} />
             </a>
           </div>
         </div>
