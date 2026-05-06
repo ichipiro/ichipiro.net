@@ -1,3 +1,11 @@
 .flexContainer {
   composes: spaceBetween from "@/utilsCSS/utils.module.css";
+  padding: 10px 40px;
+  background: #FFFFFFDD;
+  backdrop-filter: blur(4px) saturate(120%);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 15;
 }
