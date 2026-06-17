@@ -1,17 +1,14 @@
 import styles from "@/components/header/header.module.css";
 import Nav from "../Nav/nav";
-import Container from "../container/container";
 import Logo from "../logo/logo";
 
 const Header = () => {
   return (
-    <header>
-      <Container large>
+    <header className={styles.header}>
         <div className={styles.flexContainer}>
           <Logo />
           <Nav />
         </div>
-      </Container>
     </header>
   );
 };

@@ -17,7 +17,7 @@ const ContentSection = ({
   imageUrl: StaticImageData;
 }>) => {
   return (
-    <div className={styles.flexContainer} style={{ padding: "30px" }}>
+    <div className={styles.flexContainer}>
       {/* 左側 */}
       <div>
         {/* ヘッダー */}
@@ -31,7 +31,7 @@ const ContentSection = ({
         </div>
       </div>
       {/* 右側 */}
-      <ExportedImage src={imageUrl} width={700} height={700} alt="" preload />`
+      <ExportedImage className={styles.img} src={imageUrl} width={700} height={700} alt="" preload />
     </div>
   );
 };

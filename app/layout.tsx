@@ -2,14 +2,19 @@ import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
 import Analytics from "@/components/Analytics/Analytics";
 import { Viewport } from "next";
-import { Zen_Kaku_Gothic_New } from "next/font/google";
+import { Inter, Figtree } from "next/font/google";
 import { ReactNode, Suspense } from "react";
 import "./globals.css";
 
-const ZenKakuGothicNewFont = Zen_Kaku_Gothic_New({
-  weight: "500",
+const InterFont = Inter({
   subsets: ["latin"],
-  variable: "--font-ZenKakuGothicNew",
+  variable: "--font-Inter",
+  display: 'swap'
+});
+
+const FigtreeFont = Figtree({
+  subsets: ["latin"],
+  variable: "--font-Figtree",
   display: 'swap'
 });
 
@@ -26,7 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"
         />
       </head>
-        <body className={ZenKakuGothicNewFont.className}>
+        <body className={`${FigtreeFont.variable} ${InterFont.variable}`}>
           <Suspense fallback={null}>
             <Analytics />
           </Suspense>
