@@ -1,6 +1,7 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import ContentHeader from "../ContentHeader/ContentHeader";
 import styles from "./ContentSection.module.css";
+import type { StaticImageData } from "next/image";
 
 const ContentSection = ({
   number,
@@ -13,7 +14,7 @@ const ContentSection = ({
   title: string;
   description: string;
   pointDescription: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
 }>) => {
   return (
     <div className={styles.flexContainer} style={{ padding: "30px" }}>
@@ -30,7 +31,7 @@ const ContentSection = ({
         </div>
       </div>
       {/* 右側 */}
-      <Image src={imageUrl} width={700} height={700} alt="" priority />`
+      <ExportedImage src={imageUrl} width={700} height={700} alt="" preload />`
     </div>
   );
 };

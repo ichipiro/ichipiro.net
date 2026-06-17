@@ -14,7 +14,7 @@ import nextConfig from "@/next.config.mjs";
 const BASE_PATH = nextConfig.basePath || "";
 
 function Model(props: any) {
-  const group: any = useRef();
+  const group: any = useRef(undefined);
   // Load model
   const { nodes, materials }: any = useGLTF(`${BASE_PATH}/laptop.glb`);
   // Make it float

@@ -10,6 +10,7 @@ const ZenKakuGothicNewFont = Zen_Kaku_Gothic_New({
   weight: "500",
   subsets: ["latin"],
   variable: "--font-ZenKakuGothicNew",
+  display: 'swap'
 });
 
 export const viewport: Viewport = {
