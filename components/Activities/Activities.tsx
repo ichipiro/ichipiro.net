@@ -7,9 +7,9 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { TbChevronLeft, TbChevronRight } from "react-icons/tb";
-import TeireiImg from "@/public/teirei.jpg";
-import GitstudyImg from "@/public/gitstudy.jpg";
-import HackImg from "@/public/hack.png";
+import TeireiImg from "@/public/images/teirei.jpg";
+import GitstudyImg from "@/public/images/gitstudy.jpg";
+import HackImg from "@/public/images/hack.png";
 
 const Activities = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [

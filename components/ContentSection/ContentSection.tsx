@@ -31,7 +31,7 @@ const ContentSection = ({
         </div>
       </div>
       {/* 右側 */}
-      <ExportedImage className={styles.img} src={imageUrl} width={700} height={700} alt="" preload />
+      <ExportedImage className={styles.img} src={imageUrl} width={700} height={700} alt="" />
     </div>
   );
 };
