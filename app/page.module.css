@@ -8,7 +8,7 @@
 }
 
 .box {
-  margin-bottom: var(--space-lg);
+  margin-bottom: 15rem;
 }
 
 .title {
@@ -22,8 +22,9 @@
 }
 
 .msg {
-  font-size: calc(var(--body) * 1.1);
-  padding-bottom: var(--space-xs);
+  font-size: 1.1rem;
+  padding: 10px 0;
+  line-height: 1.8rem;
 }
 
 .heading {
@@ -61,3 +62,189 @@
 .highlightBox p {
   margin: 0;
 }
+
+.main {
+  padding-top: 100px;
+}
+
+.topMsg {
+  margin-top: 6rem;
+}
+
+.chartContainer {
+  margin-top: 40px;
+}
+
+.enterDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enterDesc div {
+  border-radius: 10px;
+  padding: 20px 30px;
+  background: #00000010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.linkBtn {
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  background: #000000BB;
+  border-radius: 6px;
+  &:hover {
+    animation: 2s gradient cubic-bezier(0.19, 1, 0.22, 1);
+    background: linear-gradient(
+      45deg,
+      hsl(202deg 51% 54%) 0%,
+      hsl(194deg 72% 46%) 8%,
+      hsl(189deg 100% 39%) 17%,
+      hsl(185deg 100% 38%) 25%,
+      hsl(179deg 100% 36%) 33%,
+      hsl(172deg 100% 37%) 42%,
+      hsl(164deg 100% 38%) 50%,
+      hsl(143deg 53% 52%) 58%,
+      hsl(111deg 49% 57%) 67%,
+      hsl(84deg 54% 52%) 75%,
+      hsl(66deg 67% 46%) 83%,
+      hsl(53deg 92% 44%) 92%,
+      hsl(43deg 98% 50%) 100%
+    ) 0 / 200% 100%;
+    background-position: 100% 0;
+    color: white;
+  }
+  &:active {
+    filter: brightness(80%);
+  }
+}
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contacts {
+  display: flex;
+  gap: 30px;
+}
+
+.contacts a {
+  background: #00000010;
+  border: 1px solid #00000020;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .arrowRight {
+    display: none;
+  }
+  &:hover {
+    & span {
+      color: white;
+    }
+    & .arrowRight {
+      display: block;
+      font-size: 2rem;
+      animation: .3s showArrow cubic-bezier(0, 0.79, 0, 0.98);
+    }
+    border: solid 1px transparent;
+    animation: 2s gradient cubic-bezier(0.19, 1, 0.22, 1);
+    background: linear-gradient(
+      45deg,
+      hsl(202deg 51% 54%) 0%,
+      hsl(194deg 72% 46%) 8%,
+      hsl(189deg 100% 39%) 17%,
+      hsl(185deg 100% 38%) 25%,
+      hsl(179deg 100% 36%) 33%,
+      hsl(172deg 100% 37%) 42%,
+      hsl(164deg 100% 38%) 50%,
+      hsl(143deg 53% 52%) 58%,
+      hsl(111deg 49% 57%) 67%,
+      hsl(84deg 54% 52%) 75%,
+      hsl(66deg 67% 46%) 83%,
+      hsl(53deg 92% 44%) 92%,
+      hsl(43deg 98% 50%) 100%
+    ) 0 / 200% 100%;
+    background-position: 100% 0;
+    color: white;
+  }
+  &:active {
+    filter: brightness(80%);
+  }
+}
+@media screen and (max-width: 390) {
+  .contacts a {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .4rem;
+    & .arrowRight {
+      display: block;
+      font-size: 2rem;
+    }
+    &:hover {
+      & .arrowRight {
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes showArrow {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.contacts span {
+  color: #000000AA;
+  font-size: 1.2rem;
+}
+.contacts .method {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 4px;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 885px){
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts a {
+    max-width:unset;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .enterDesc div {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

@@ -62,6 +62,7 @@ function Model(props: any) {
               position={[0, 0.05, -0.09]}
               transform
               occlude
+              zIndexRange={[0, 10]}
             >
               <div
                 className="wrapper"

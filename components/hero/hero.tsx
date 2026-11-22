@@ -1,15 +1,15 @@
 "use client"
 
-import ie from "@/public/ichipiroexplorer.png";
+import ie from "@/public/IE_logo_traced.svg";
 import ExportedImage from "next-image-export-optimizer";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import ThreeScene from "../ThreeScene";
 import styles from "./hero.module.css";
 
 const Hero = ({
   title,
   subtitle,
-}: Readonly<{ title: string; subtitle: string }>) => {
+}: Readonly<{ title: ReactNode; subtitle: ReactNode }>) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

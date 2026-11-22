@@ -37,7 +37,7 @@ const Nav = () => {
       <ul className={styles.list}>
         <li>
           <Link href="#topmessage" onClick={closeNav}>
-            Top
+            TOP
           </Link>
         </li>
         <li>

@@ -27,14 +27,11 @@ const Activities = () => {
 
   return (
     <div id="activity" className={styles.box}>
-      <div className={styles.centerText}>
+      <div>
         <SectionHeader title="ACTIVITY" subtitle="活動紹介" />
       </div>
 
       <div className={styles.embla}>
-        <button className={styles.embla__prev} onClick={goToPrev}>
-          <TbChevronLeft />
-        </button>
         <div className={styles.embla__viewport} ref={emblaRef}>
           <div className={styles.embla__container}>
             <div className={styles.embla__slide}>
@@ -67,6 +64,11 @@ const Activities = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.buttons}>
+        <button className={styles.embla__prev} onClick={goToPrev}>
+          <TbChevronLeft />
+        </button>
         <button className={styles.embla__next} onClick={goToNext}>
           <TbChevronRight />
         </button>

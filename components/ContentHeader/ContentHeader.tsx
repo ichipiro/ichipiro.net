@@ -8,7 +8,7 @@ const ContentHeader = ({
   return (
     <div style={{ marginBottom: "30px" }}>
       <div className={styles.flexContainer}>
-        <div>
+        <div className={styles.numContainer}>
           <div className={styles.subtitle}>{subtitle}</div>
           <div className={styles.title}>{number}</div>
         </div>

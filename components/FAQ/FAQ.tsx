@@ -1,37 +1,17 @@
-"use client";
-import { Avatar, Box, Typography, NoSsr } from "@mui/material";
-import { blue } from "@mui/material/colors";
+import styles from "./FAQ.module.css"
 
 const FAQ = ({ question, answer }: any) => {
   return (
-    <NoSsr>
-      <Box sx={{ mb: 4, p: 2 }}>
-        <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-          <Avatar sx={{ bgcolor: blue[500], mr: 2, width: 32, height: 32 }}>
-            Q
-          </Avatar>
-          <Typography
-            variant="h6"
-            color="textPrimary"
-            sx={{ fontSize: { xs: "1rem", sm: "1.25rem" } }}
-          >
-            {question}
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Avatar sx={{ bgcolor: "black", mr: 2, width: 32, height: 32 }}>
-            A
-          </Avatar>
-          <Typography
-            variant="body1"
-            color="textPrimary"
-            sx={{ fontSize: { xs: "0.875rem", sm: "1rem" } }}
-          >
-            {answer}
-          </Typography>
-        </Box>
-      </Box>
-    </NoSsr>
+    <div className={styles.faqContainer}>
+      <div className={styles.faqQuestionContainer}>
+        <span className={styles.iconized}>Q.</span>
+        <span className={styles.p}>{question}</span>
+      </div>
+      <div className={styles.faqAnswerContainer}>
+        <span className={styles.iconized}>A.</span>
+        <p>{answer}</p>
+      </div>
+    </div>
   );
 };
 

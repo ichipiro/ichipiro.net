@@ -1,38 +1,48 @@
 .flexContainer {
   composes: sideBySideCenter from "@/utilsCSS/utils.module.css";
+  padding: 120px 0;
 }
 
 .text {
-  padding-top: calc(var(--display) * 0.5);
-  padding-bottom: calc(var(--display) * 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .title {
-  font-size: var(--display);
-  font-weight: 900;
+  font-family: var(--font-Figtree);
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 7.8rem;
 }
 
 .subtitle {
   font-size: var(--small-heading2);
+  font-weight: 600;
+  color: #646464;
 }
 
 /* image */
 .image {
   width: 100%;
-  padding: 10px;
+  padding: 50px;
 }
 
-.image img {
-  border-radius: 50%;
-  background: black;
-}
 
 @media (min-width: 768px) {
   .image {
     width: 50%;
     padding: 40px;
   }
+}
+
+@media screen and (max-width: 768px){
   .title {
-    letter-spacing: 0.15em;
+    font-size: 5rem;
+    line-height: 5.8rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 }
