@@ -14,6 +14,8 @@
 /out/
 /public/nextImageExportOptimizer
 /public/next-image-export-optimizer-hashes.json
+/public/images/nextImageExportOptimizer
+/public/images/next-image-export-optimizer-hashes.json
 
 # production
 /build
